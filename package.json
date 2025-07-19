@@ -1,0 +1,19 @@
+{
+  "name": "rpgnode",
+  "version": "1.0.0",
+  "description": "An rpg simple game made with node.js for console",
+  "keywords": [
+    "node",
+    "rpg"
+  ],
+  "license": "ISC",
+  "author": "David Gomez",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "inquirer": "^12.7.0"
+  }
+}
