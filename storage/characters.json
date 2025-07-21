@@ -1,0 +1,44 @@
+[
+  {
+    "name": "character 1",
+    "class_type": "warrior",
+    "stats": {
+      "exp": 0,
+      "gold": 100,
+      "lives": 5,
+      "atk": 3,
+      "def": 3,
+      "class_type": "warrior",
+      "inventory": [],
+      "level": 1
+    }
+  },
+  {
+    "name": "character 2",
+    "class_type": "mage",
+    "stats": {
+      "exp": 0,
+      "gold": 100,
+      "lives": 4,
+      "atk": 5,
+      "def": 2,
+      "class_type": "warrior",
+      "inventory": [],
+      "level": 1
+    }
+  },
+  {
+    "name": "el wachin",
+    "class_type": "warrior",
+    "stats": {
+      "exp": 0,
+      "gold": 100,
+      "lives": 5,
+      "atk": 3,
+      "def": 3,
+      "class_type": "warrior",
+      "inventory": [],
+      "level": 1
+    }
+  }
+]
