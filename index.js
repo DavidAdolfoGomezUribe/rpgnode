@@ -9,6 +9,7 @@ const Battle = require("./src/services/gameLogic");
 const saveCurrentCharacter = require('./utils/saveCharacter');
 const loadSavedGame = require('./utils/loadSavedGame');
 const startAdventure = require('./utils/startAdventure');
+const openStore = require('./utils/openStore');
 
 
 const createNewCharacter = require('./utils/createNewCharacter');
@@ -18,20 +19,6 @@ const { getPersonaje, setPersonaje } = require('./utils/state');
 // Paths
 const STORAGE_PATH = path.join(__dirname, 'storage', 'characters.json');
 const SAVE_DIR = path.join(__dirname, 'save_files');
-
-
-
-// Placeholder para la tienda
-async function openStore() {
-  const personaje = getPersonaje();
-  if (!personaje) {
-    console.log("⚠️ Debes tener un personaje cargado para acceder a la tienda.");
-    return;
-  }
-
-  console.log(`🏪 Bienvenido a la tienda, ${personaje.name}. (ORO: ${personaje.stats.gold})`);
-  console.log("🛍️ La tienda aún no está implementada.");
-}
 
 async function main() {
   let salir = false;
