@@ -7,16 +7,13 @@ const Mage = require("../src/services/Mage");
 
 const FILE_PATH = path.join(__dirname, "../storage/characters.json");
 
-// Mapeo de clases disponibles
 const clasesDisponibles = {
   warrior: Warrior,
   mage: Mage,
-  // archer: Archer,
 };
 
 async function createNewCharacter() {
   try {
-    // Preguntar nombre y clase
     const answers = await inquirer.prompt([
       {
         type: 'input',
@@ -33,40 +30,41 @@ async function createNewCharacter() {
     ]);
 
     const { name, class_type } = answers;
+    const Clase = clasesDisponibles[class_type];
+    const stats = new Clase();
 
-    // Crear instancia del personaje
-    const ClasePersonaje = clasesDisponibles[class_type];
-    const personaje = {
-      name,
-      class_type,
-      stats: new ClasePersonaje()
-    };
-
+    // Leer personajes actuales
     let personajes = [];
-
-    // Leer archivo si existe
     if (await fs.pathExists(FILE_PATH)) {
       personajes = await fs.readJson(FILE_PATH);
       if (!Array.isArray(personajes)) {
-        throw new Error("El archivo characters.json no contiene un array válido.");
+        throw new Error("El archivo de personajes no contiene un array válido.");
       }
     }
 
-    // Guardar personaje
-    personajes.push(personaje);
+    // Generar ID único
+    const nextId = personajes.length > 0
+      ? Math.max(...personajes.map(p => p.id || 0)) + 1
+      : 1;
+
+    // Crear nuevo personaje con ID
+    const nuevoPersonaje = {
+      id: nextId,
+      name,
+      class_type,
+      stats,
+    };
+
+    personajes.push(nuevoPersonaje);
     await fs.writeJson(FILE_PATH, personajes, { spaces: 2 });
 
-    console.log(`✅ Personaje "${name}" (${class_type}) guardado correctamente.`);
-    console.log("   ***********   ");
-    
+    console.log(`✅ Personaje "${name}" creado y guardado con ID #${nextId}`);
     return true;
+
   } catch (error) {
     console.error('❌ Error al crear personaje:', error.message);
     return false;
   }
-  
-  
-  
 }
 
 module.exports = createNewCharacter;
