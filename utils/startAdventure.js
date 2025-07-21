@@ -1,11 +1,11 @@
-const inquirer = require('inquirer').default;
-const Skeleton = require('../src/services/Skeleton');
-const Battle = require('../src/services/gameLogic');
+const inquirer = require("inquirer").default;
+const Skeleton = require("../src/services/Skeleton");
+const Battle = require("../src/services/gameLogic");
+const DarkKnight = require("../src/services/DarkKnight");
 const { getPersonaje } = require('./state');
+const Dragon = require("../src/services/Dragon");
 
 // Futuras implementaciones:
-// const DarkKnight = require('../src/services/DarkKnight');
-// const Dragon = require('../src/services/Dragon');
 
 async function startAdventure() {
   const personaje = getPersonaje();
@@ -33,11 +33,11 @@ async function startAdventure() {
       enemigo = new Skeleton();
       break;
     case 'darkknight':
-      console.log("⚠️ DarkKnight aún no está implementado.");
-      return;
+      enemigo = new DarkKnight();
+      break;
     case 'dragon':
-      console.log("⚠️ Dragon aún no está implementado.");
-      return;
+      enemigo = new Dragon();
+      break;
     default:
       console.log("❌ Selección inválida.");
       return;

@@ -108,15 +108,20 @@ class Battle {
     }
 
     // Resultado del combate
-    if (this.player.stats.lives <= 0) {
-      console.log("☠️ Has sido derrotado...");
+      if (this.player.stats.lives <= 0) {
+        console.log("☠️ Has sido derrotado...");
+        this.player.stats.lives = this.maxLives;
+        console.log("❤️ Te has recuperado tras la derrota. Vidas restauradas.");
     } else if (this.enemy.lives <= 0) {
-      console.log(`🏆 ¡Has vencido al ${this.enemy.constructor.name}!`);
-      console.log(`🎉 Ganaste ${this.enemy.exp} EXP y ${this.enemy.gold} gold.`);
-      this.player.stats.exp += this.enemy.exp;
-      this.player.stats.gold += this.enemy.gold;
-      this.player.stats.lives = this.maxLives;
-      console.log("❤️ Tus vidas han sido restauradas.");
+        console.log(`🏆 ¡Has vencido al ${this.enemy.constructor.name}!`);
+        console.log(`🎉 Ganaste ${this.enemy.exp} EXP y ${this.enemy.gold} gold.`);
+        this.player.stats.exp += this.enemy.exp;
+        this.player.stats.gold += this.enemy.gold;
+        this.player.stats.lives = this.maxLives;
+        console.log("❤️ Tus vidas han sido restauradas.");
+        const revisarSubidaNivel = require('../../utils/levelUp');
+        revisarSubidaNivel(this.player);
+
     }
 
     if (this.player.stats.lives > 0 && this.huir) {

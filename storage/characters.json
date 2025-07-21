@@ -1,25 +1,16 @@
 [
   {
     "id": 1,
-    "name": "Character",
+    "name": "Dav",
     "class_type": "warrior",
     "stats": {
-      "exp": 150,
-      "gold": 275,
+      "exp": 50,
+      "gold": 150,
       "lives": 5,
       "atk": 3,
       "def": 3,
       "class_type": "warrior",
       "inventory": [
-        {
-          "name": "Poción de Vida",
-          "type": "potion",
-          "price": 20,
-          "classRestriction": null,
-          "bonus": {
-            "lives": 2
-          }
-        },
         {
           "name": "Espada de Hierro",
           "type": "weapon",
@@ -27,15 +18,6 @@
           "classRestriction": "warrior",
           "bonus": {
             "atk": 2
-          }
-        },
-        {
-          "name": "Escudo Ligero",
-          "type": "armor",
-          "price": 30,
-          "classRestriction": "warrior",
-          "bonus": {
-            "def": 2
           }
         }
       ],
@@ -44,51 +26,16 @@
   },
   {
     "id": 2,
-    "name": "Breiner",
+    "name": "mage",
     "class_type": "mage",
     "stats": {
-      "exp": 50,
-      "gold": 180,
+      "exp": 0,
+      "gold": 100,
       "lives": 4,
       "atk": 5,
       "def": 2,
       "class_type": "mage",
-      "inventory": [
-        {
-          "name": "Poción de Vida",
-          "type": "potion",
-          "price": 20,
-          "classRestriction": null,
-          "bonus": {
-            "lives": 2
-          }
-        }
-      ],
-      "level": 1
-    }
-  },
-  {
-    "id": 3,
-    "name": "J.J.",
-    "class_type": "warrior",
-    "stats": {
-      "exp": 50,
-      "gold": 130,
-      "lives": 5,
-      "atk": 3,
-      "def": 3,
-      "class_type": "warrior",
-      "inventory": [
-        {
-          "name": "Espada de Hierro",
-          "type": "weapon",
-          "price": 50,
-          "classRestriction": "warrior",
-          "bonus": {
-            "atk": 2
-          }
-        }
-      ],
+      "inventory": [],
       "level": 1
     }
   }
