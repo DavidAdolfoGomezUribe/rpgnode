@@ -3,7 +3,7 @@
 
 
 ## 📽️ Video Presentación
-
+[Video](https://www.tiktok.com/@davidgomez071/video/7529744069275208966)
 
 
 **NodeRPG** es un juego de consola interactivo construido con Node.js que simula un mundo de batallas por turnos entre héroes y enemigos. Este proyecto fue desarrollado como parte de un taller para aplicar principios de programación orientada a objetos, arquitectura SOLID, diseño limpio y buenas prácticas de desarrollo.
