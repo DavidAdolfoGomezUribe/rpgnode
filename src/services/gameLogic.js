@@ -88,9 +88,11 @@ class Battle {
           break;
         }
         case 'habilidad': {
-          console.log("🌀 No tienes habilidades aún.");
+        
+          console.log("❌ No tienes habilidades desbloqueadas.");
           break;
-        }
+        } 
+
         case 'huir': {
           console.log("🏃 Huiste del combate.");
           this.huir = true;

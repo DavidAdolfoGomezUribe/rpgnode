@@ -1,40 +1,15 @@
 [
   {
     "id": 1,
-    "name": "Dav",
+    "name": "dav",
     "class_type": "warrior",
     "stats": {
-      "exp": 50,
-      "gold": 150,
+      "exp": 0,
+      "gold": 100,
       "lives": 5,
       "atk": 3,
       "def": 3,
       "class_type": "warrior",
-      "inventory": [
-        {
-          "name": "Espada de Hierro",
-          "type": "weapon",
-          "price": 50,
-          "classRestriction": "warrior",
-          "bonus": {
-            "atk": 2
-          }
-        }
-      ],
-      "level": 1
-    }
-  },
-  {
-    "id": 2,
-    "name": "mage",
-    "class_type": "mage",
-    "stats": {
-      "exp": 0,
-      "gold": 100,
-      "lives": 4,
-      "atk": 5,
-      "def": 2,
-      "class_type": "mage",
       "inventory": [],
       "level": 1
     }
